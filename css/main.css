@@ -1,0 +1,58 @@
+* {
+  border: none;
+}
+
+a:link, a:visited, a:hover, a:active  {
+    text-decoration:none;
+}
+
+body {
+    font-family: 'Tangerine', 'Inconsolata', 'Droid Sans', serif;
+}
+
+
+#features{
+    background-color: #6A5ACD;
+    float: left;
+    margin-left: -1em;
+    margin-top: -1em;
+    padding-left: 1em;
+    width:33%;
+    height: 100%;
+    font-size: 150%;
+    text-indent: 50px;
+    
+}
+
+label {
+    display: block;
+    margin-left: 5px;
+}
+input {
+    float: left;
+    margin-left: 50px;
+}
+
+#select{
+    margin-left: 10em;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 125%;
+}
+
+#display{
+    background-color: #F1F1D4;
+    float:right;
+    margin-top: -1em;
+    padding-top: 1em;
+    width:67%;
+}
+
+#background{
+    background-color: #a45acd;
+    /*#cd6a5a
+    #5acd6a*/
+    margin-left: -1em;
+    padding-left: 1em;
+    
+}
