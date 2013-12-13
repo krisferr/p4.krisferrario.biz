@@ -1,52 +1,42 @@
 <?php if($user): ?>
-	<h2>Hello, <?=$user->first_name;?>!</h2>
+	<h3>Hello, <?=$user->first_name;?>!</h3>
 	
 
 <?php else: ?>
-<div id=features>
-		<h1>Daily Prayer</h1>
-		
-		<h3>Date:</h3>
-			<input type="text" id="datepicker"></br>
-		
-		<h2>Select a Service:</h2>
-			<h3>1979 US Book of Common Prayer</h3>
-			<input type='radio' name='service' id='morning' checked>
-			<label for 'morning'>Morning Prayer</label></br>
-			
-			<input type='radio' name='service' id='evening'>
-			<label for 'evening'>Evening Prayer</label></br>
-			
-			<input type='radio' name='service' id='compline'>
-			<label for 'compline'>Compline</label></br>
-			
-			
-			<h3>Common Worship (Church of England)</h3>
-			<input type='radio' name='service' id='cw-am' disabled>
-			<label for 'cw-am'>Morning Prayer</label></br>
-			
-			<input type='radio' name='service' id='cw-pm' disabled>
-			<label for 'cw-pm'>Evening Prayer</label></br>
-			
-			<input type='radio' name='service' id='night' disabled>
-			<label for 'night'>Night Prayer</label>
-			
-			
-		<!-- Button -->
-		<input type='button' id='select' value='Next'>
-		</br></br></br>	
-		
-		
-	</div>
+	<h3>
+		Hello, Guest!</br>
+		<a href="/users/signup">Please registar</a></br>
+		or <a href="/users/login">Log In</a></br>
+	</h3>
 	
-	
-	<div id=display>
-		
-		</br></br></br></br></br></br></br></br></br></br></br></br>
-		</br></br></br></br></br></br></br></br></br></br></br></br>
-		</br></br></br></br></br></br></br></br></br></br></br>
-	</div>
-	
-	
-	<script src="js/compline.js"></script>
 <?php endif; ?>
+
+<div id=menu>
+		</br></br><h1>Welcome to Daily Prayer</h1></br>
+		
+		<h2>Date:</h2>
+			<input type="text" id="datepicker"></br></br>
+		
+		<h2>Select a Service:</h2></br>
+			<h2> From <em>The Book of Common Prayer (1979)</em>:</h2>
+			<form style="display: inline" action="/services/us_morning" method="get">
+				<button>Morning Prayer</button>
+			</form>
+			<form style="display: inline" action="/services/us_evening" method="get">
+				<button>Evening Prayer</button>
+			</form>
+			<form style="display: inline" action="/services/us_compline" method="get">
+				<button>Compline</button></br>
+			</form></br>
+			<h2> From <em>Common Worship</em>:</h2>
+			<form style="display: inline" action="/services/uk_morning" method="get">
+				<button>Morning Prayer</button>
+			</form>
+			<form style="display: inline" action="/services/uk_evening" method="get">
+				<button>Evening Prayer</button>
+			</form>
+			<form style="display: inline" action="/services/uk_night" method="get">
+				<button>Night Prayer</button>
+			</form>
+			
+			
