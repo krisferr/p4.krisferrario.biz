@@ -24,6 +24,17 @@ h3{
     margin-top:-2em;
 }
 
+#greeting{
+    color:#000000;
+    width:auto;
+    font: 11px;
+    margin-right: 1em;
+}
+
+#greeting a{
+  color:#000000;
+}
+
 #menu{
     background-color: #F1F1D4;
     width:40em;
@@ -41,9 +52,24 @@ h3{
 }
 
 button{
-    font-size: large;
-    background-color: #F1F1D4;
+    background-color: #dede9a;
     cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    font-family: 'Oswald';
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    margin-left: 1em; margin-right: 1em;
+    margin-top: 1em;
+}
+
+button:hover {
+    border: none;
+    color: #fff;
+    box-shadow: 0px 0px 1px #777;
 }
 
 footer, .push {
@@ -53,7 +79,10 @@ footer, .push {
 footer{
  position:absolute;
    bottom:0;
-   background-color: #dede9a;
+   background-color: #F1F1D4;
+   border-top:solid 5px #dede9a;
+   border-right:solid 5px #dede9a;
+   border-left:solid 5px #dede9a;
    width:80%;
    margin-right:10%;
    margin-left:10%;
