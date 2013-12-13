@@ -1,12 +1,12 @@
 <?php if($user): ?>
-	<h3>Hello, <?=$user->first_name;?>!</h3>
+	<h3 id=greeting>Hello, <a href="/users/profile"><?=$user->first_name;?></a>!</h3>
 	
 
 <?php else: ?>
-	<h3>
+	<h3 id=greeting>
 		Hello, Guest!</br>
-		<a href="/users/signup">Please registar</a></br>
-		or <a href="/users/login">Log In</a></br>
+		<a href="/users/signup">Please registar</a>
+		or <a href="/users/login">Log In</a>
 	</h3>
 	
 <?php endif; ?>
@@ -18,25 +18,18 @@
 			<input type="text" id="datepicker"></br></br>
 		
 		<h2>Select a Service:</h2></br>
-			<h2> From <em>The Book of Common Prayer (1979)</em>:</h2>
-			<form style="display: inline" action="/services/us_morning" method="get">
+			<h2> From <em>The Book of Common Prayer (1979)</em></h2>
+			<form style="display: inline" action="/services/morning" method="get">
 				<button>Morning Prayer</button>
 			</form>
-			<form style="display: inline" action="/services/us_evening" method="get">
+			<form style="display: inline" action="/services/evening" method="get">
 				<button>Evening Prayer</button>
 			</form>
-			<form style="display: inline" action="/services/us_compline" method="get">
+			<form style="display: inline" action="/services/compline" method="get">
 				<button>Compline</button></br>
 			</form></br>
-			<h2> From <em>Common Worship</em>:</h2>
-			<form style="display: inline" action="/services/uk_morning" method="get">
-				<button>Morning Prayer</button>
-			</form>
-			<form style="display: inline" action="/services/uk_evening" method="get">
-				<button>Evening Prayer</button>
-			</form>
-			<form style="display: inline" action="/services/uk_night" method="get">
-				<button>Night Prayer</button>
-			</form>
+			
+		<h2><a href=#overlay>Why Prayer?</a></h2>
+			
 			
 			
