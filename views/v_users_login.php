@@ -1,6 +1,8 @@
+<div id=menu>
+<div id=user>
 <h2> Log In</h2>
 
-<div id=menu>
+
 <form method='POST' action='/users/p_login'>
     
     Email<br>
@@ -13,7 +15,8 @@
 
     <br><br>
 
-    <input type='submit' value='Log in'>
+    <input type='submit' id='submit' value='Log in'>
 
 </form>
+</div>
 </div>
