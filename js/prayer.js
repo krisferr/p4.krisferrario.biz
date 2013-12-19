@@ -12,7 +12,7 @@ function calculate_date() {
   month       = currentTime.getMonth() + 1; //returns values 0-11 so +1 is required
   day         = currentTime.getDate();
   year        = currentTime.getFullYear();
-  calcdate    = year + "-" + month + "-" + day;
+  calcdate    = month + "/" + day + "/" + year;
   return calcdate;
 }
 
@@ -23,5 +23,15 @@ function prepopulate_date() {
 window.onload = prepopulate_date;
 
 function passing_date(){
-     window.location.href = "c_base.php?date=" + document.getElementById("datepicker").setAttribute('value', calculate_date());
+     window.location.href = "c_services.php?date=" + document.getElementById("datepicker").setAttribute('value', calculate_date());
 }
+
+//Allows for end message (overlay) be be hidden when the user hits the "Ok" button
+$(document).ready(function(){ 
+  $("#hide").click(function(){ 
+    $("#overlay").hide();  
+  });
+  $("#show").click(function(){  
+    $("#overlay").show(); 
+  });
+});

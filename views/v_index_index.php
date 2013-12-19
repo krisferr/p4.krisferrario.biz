@@ -15,7 +15,7 @@
 		</br></br><h1>Welcome to Daily Prayer</h1></br>
 		
 		<h2>Date:</h2>
-			<input type="text" id="datepicker"></br></br>
+			<input type="text" id="datepicker" value="<?php //echo $date; ?>"></br></br>
 		
 		<h2>Select a Service:</h2></br>
 			<h2> From <em>The Book of Common Prayer (1979)</em></h2>
@@ -29,7 +29,18 @@
 				<button>Compline</button></br>
 			</form></br>
 			
-		<h2><a href=#overlay>Why Prayer?</a></h2>
-			
+			<form style="display: inline" type="button" id="show">
+				<button>Why Prayer?</button></br>
+			</form></br>
+				
+		<div id="overlay">
+			<div>
+				<p>You deserve a break!</p>
+				<form style="display: inline" type="button" id="hide">
+					<button>Back</button></br>
+				</form></br>
+			</div>
+		</div>
+</div>
 			
 			
