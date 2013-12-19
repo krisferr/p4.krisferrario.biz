@@ -7,7 +7,7 @@ class base_controller {
 	public $template;
 	public $email_template;
 	public $date;
-	public $season;
+	public $dateObj;
 
 	/*-------------------------------------------------------------------------------------------------
 
@@ -25,10 +25,16 @@ class base_controller {
 			$this->email_template = View::instance('_v_email');			
 								
 		# So we can use $user in views			
-			$this->template->set_global('user', $this->user);
+			$this->template->set_global('user', $this->user);	
+			
+		# Instantiate Date obj
+			#$this->dateObj = new Date();
+			
+		# Authenticate / load date
+			#$this->date = $this->dateObj->authenticate();
 		
-		# Sets the $date
-			#$this->date = new date("Y-m-d");
+		# So we can use $date in views			
+			#$this->template->set_global('date', $this->date);
 	}
 	
 } # eoc
