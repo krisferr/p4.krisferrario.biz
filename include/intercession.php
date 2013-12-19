@@ -44,25 +44,3 @@ elseif (date("d")%2==0)
 echo $intercession;
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
