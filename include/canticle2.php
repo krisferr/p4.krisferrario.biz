@@ -1,10 +1,11 @@
 <div class=canticle>
 
     <?php
+        $season="Advent";
     
         if ($season=="Lent")        
         {
-                $canticle2 = "<h4>2 A Song of Praise &nbsp;&nbsp;&nbsp;&nbsp;<em>Benedictus es, Domine</em></h4>
+                $canticle2 = "<h4>2 A Song of Praise &nbsp;&nbsp;&nbsp;&nbsp;<em>Benedictus es, Domine</em></h4></br>
                 <p>Song of the Three Young Men, 29-34</p>
                 <p>Glory to you, Lord God of our fathers;</br>
                         &nbsp;&nbsp;&nbsp;&nbsp;you are worthy of praise; glory to you.</br>
@@ -24,7 +25,7 @@
              
         else
         {
-                $canticle2 = "<h4>7 We Praise You, O God <em>&nbsp;&nbsp;&nbsp;&nbsp;Te Deum Laudamus</em></h4>
+                $canticle2 = "<h4>7 We Praise You, O God <em>&nbsp;&nbsp;&nbsp;&nbsp;Te Deum Laudamus</em></h4></br>
                 <p>We praise you, O God, </br>
                         &nbsp;&nbsp;&nbsp;&nbsp;we acclaim you as Lord; </br>
                         &nbsp;&nbsp;&nbsp;&nbsp;all creation worships you, </br>
@@ -43,11 +44,10 @@
                 <p>You, Christ, are the king of glory, </br>
                         &nbsp;&nbsp;&nbsp;&nbsp;the eternal Son of the Father. </br>
                 When you took our flesh to set us free </br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;you humbly chose the Virgin’s womb. </br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;you humbly chose the Virgin's womb. </br>
                 You overcame the sting of death </br>
                         &nbsp;&nbsp;&nbsp;&nbsp;and opened the kingdom of heaven to all believers. </br>
-                You are seated at God
-                d’s right hand in glory. </br>
+                You are seated at God's right hand in glory. </br>
                         &nbsp;&nbsp;&nbsp;&nbsp;We believe that you will come to be our judge. </br>
                 Come then, Lord, and help your people, </br>
                         &nbsp;&nbsp;&nbsp;&nbsp;bought with the price of your own blood, </br>

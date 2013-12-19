@@ -1,8 +1,8 @@
 <div class=creed>
     <h4>The Apostles' Creed</h4>
-    
+    </br>
         <p><em>Officiant and People together, all standing</em></p>
-        
+        </br>
         <p>I believe in God, the Father almighty,</br> 
                 &nbsp;&nbsp;&nbsp;&nbsp;creator of heaven and earth;</br> 
         I believe in Jesus Christ, his only Son, our Lord.</br> 

@@ -1,11 +1,13 @@
 <div class=canticle>
     <?php
         
+        $season="Advent";
+        
         if ($season=="Christmas")        
         {
     
-                $canticle1 = "<h4>16 The Song of Zechariah &nbsp;&nbsp;&nbsp;&nbsp;<em>Benedictus Dominus Deus</em></h4> 
-                          <p>Luke 1: 68-79</p>
+                $canticle1 = "<h4>16 The Song of Zechariah &nbsp;&nbsp;&nbsp;&nbsp;<em>Benedictus Dominus Deus</em></h4></br> 
+                          <p>Luke 1: 68-79</p></br>
                 
                 <p>Blessed be the Lord, the God of Israel; * </br>
                     &nbsp;&nbsp;&nbsp;&nbsp;he has come to his people and set them free. </br>
@@ -42,8 +44,8 @@
             
         else
         {        
-                $canticle1 = "<h4>11    The Third Song of Isaiah   &nbsp;&nbsp;&nbsp;&nbsp; <em>Surge, illuminare</em></h4> 
-                          <p>Isaiah 60:1-3, 11a, 14c, 18-19</p>
+                $canticle1 = "<h4>11    The Third Song of Isaiah   &nbsp;&nbsp;&nbsp;&nbsp; <em>Surge, illuminare</em></h4></br> 
+                          <p>Isaiah 60:1-3, 11a, 14c, 18-19</p></br>
                 
                 <p>Arise, shine, for your light has come, * </br>
                     &nbsp;&nbsp;&nbsp;&nbsp;and the glory of the Lord has dawned upon you. </br>
