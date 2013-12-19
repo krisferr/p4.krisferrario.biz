@@ -29,18 +29,9 @@
 				<button>Compline</button></br>
 			</form></br>
 			
-			<form style="display: inline" type="button" id="show">
+			<form style="display: inline" action="/services/whyprayer" method="get">
 				<button>Why Prayer?</button></br>
 			</form></br>
-				
-		<div id="overlay">
-			<div>
-				<p>You deserve a break!</p>
-				<form style="display: inline" type="button" id="hide">
-					<button>Back</button></br>
-				</form></br>
-			</div>
-		</div>
 </div>
 			
 			
