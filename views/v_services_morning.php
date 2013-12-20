@@ -4,7 +4,7 @@
 
 <?php else: ?>
 	<h3 id=greeting>
-		Hello, Guest!</br>
+		Hello, Guest!<br>
 		<a href="/users/signup">Please registar</a>
 		or <a href="/users/login">Log In</a>
 	</h3>
@@ -19,12 +19,12 @@
     <h2>The Season of<?php //echo $season ?></h2>
     
     <?=$opening;?>
-    </br>
+    <br>
     <?=$confession;?>
-    </br>
+    <br>
     <?=$psalm;?>
-    </br>	    
-    </br>
+    <br>	    
+    <br>
     <h4>The Lessons</h4>
     
         <p>The Old Testament Lesson
@@ -35,9 +35,9 @@
         
         <p><em>Reader:</em> The Word of the Lord.</p> 
         <p><em>People:</em><strong> Thanks be to God.</strong></p>
-        </br></br>
+        <br><br>
         <?=$canticle1;?>
-        </br></br>
+        <br><br>
         <p>The Gospel
             <?php echo '<a href="http://www.biblegateway.com/reading-plans/bcp-daily-office/', urlencode(date('Y')),'/', urlencode(date('m')), '/', urlencode(date('d')),'?version=ESV', '">';?> (ESV)</a>
             <?php echo '<a href="http://www.biblegateway.com/reading-plans/bcp-daily-office/', urlencode(date('Y')),'/', urlencode(date('m')), '/', urlencode(date('d')),'?version=NRSV', '">';?>(NRSV)</a>
@@ -46,21 +46,21 @@
         
         <p><em>Reader:</em> The Word of the Lord.</p> 
         <p><em>People:</em><strong> Thanks be to God.</strong></p>
-        </br></br>
+        <br><br>
         <?=$canticle2;?>
-        </br></br>
+        <br><br>
         <?=$creed;?>
-        </br></br>
+        <br><br>
         <?=$lp;?>
-        </br></br>
+        <br><br>
         <?=$intercession;?>
-        </br></br>
+        <br><br>
         <?=$collect;?>
-        </br></br>
+        <br><br>
 	<?=$mission;?>
-        </br></br>
+        <br><br>
         <?=$thanksgiving;?>
-        </br></br>
+        <br><br>
 	<?=$closing;?>
 
 </div>

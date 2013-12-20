@@ -14,7 +14,7 @@ if (date("d")%2==1)
     <p><em>People:</em><strong>    Let your people sing with joy.</strong></p> 
     <p><em>Officiant: </em>.    Give peace, O Lord, in all the world;</p> 
     <p><em>People:</em><strong>    For only in you can we live in safety.</strong></p>
-    </br></br>
+    <br><br>
     <p><em>Officiant: </em>    Lord, keep this nation under your care;</p> 
     <p><em>People:</em><strong>    And guide us in the way of justice and truth.</strong></p> 
     <p><em>Officiant: </em>    Let your way be known upon earth;</p> 
