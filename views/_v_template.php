@@ -10,7 +10,7 @@
 	<!-- Controller Specific JS/CSS -->
 	<link rel="stylesheet" href="../css/main.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine:bold,bolditalic|Inconsolata:italic|Droid+Sans">
-	<link href="//fonts.googleapis.com/css?family=Old+Standard TT:400italic,400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Old+Standard%20TT:400italic,400,700">
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
