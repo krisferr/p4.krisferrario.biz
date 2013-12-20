@@ -12,8 +12,8 @@
 <?php endif; ?>
 
     
-<div id=morning>
-<h1>Morning Prayer</h1>
+<div id=evening>
+<h1>Evening Prayer</h1>
 
     <h2> <?php echo date("l, F j, Y")//, mktime($date)) ?></h2>
     <h2>The Season of<?php //echo $season ?></h2>
@@ -25,14 +25,14 @@
     <?=$invitatory;?>
     <br>
     <br>
-    <?=$venite;?>
+    <?=$light;?>
     <br>
     <br>
     <?=$psalm;?>
     <br>	    
     <h4>The Lessons</h4>
     
-        <p>The Old Testament Lesson
+        <p>The New Testament Lesson
             <?php echo '<a href="http://www.biblegateway.com/reading-plans/bcp-daily-office/', urlencode(date('Y')),'/', urlencode(date('m')), '/', urlencode(date('d')),'?version=ESV', '">';?> (ESV)</a>
             <?php echo '<a href="http://www.biblegateway.com/reading-plans/bcp-daily-office/', urlencode(date('Y')),'/', urlencode(date('m')), '/', urlencode(date('d')),'?version=NRSV', '">';?>(NRSV)</a>
             <?php echo '<a href="http://www.biblegateway.com/reading-plans/bcp-daily-office/', urlencode(date('Y')),'/', urlencode(date('m')), '/', urlencode(date('d')),'?version=NIV', '">';?> (NIV)</a>
@@ -41,18 +41,9 @@
         <p><em>Reader:</em> The Word of the Lord.</p> 
         <p><em>People:</em><strong> Thanks be to God.</strong></p>
         <br><br>
-        <?=$canticle1;?>
+        <?=$magnificat;?>
         <br><br>
-        <p>The Gospel
-            <?php echo '<a href="http://www.biblegateway.com/reading-plans/bcp-daily-office/', urlencode(date('Y')),'/', urlencode(date('m')), '/', urlencode(date('d')),'?version=ESV', '">';?> (ESV)</a>
-            <?php echo '<a href="http://www.biblegateway.com/reading-plans/bcp-daily-office/', urlencode(date('Y')),'/', urlencode(date('m')), '/', urlencode(date('d')),'?version=NRSV', '">';?>(NRSV)</a>
-            <?php echo '<a href="http://www.biblegateway.com/reading-plans/bcp-daily-office/', urlencode(date('Y')),'/', urlencode(date('m')), '/', urlencode(date('d')),'?version=NIV', '">';?> (NIV)</a>
-        </p>
-        
-        <p><em>Reader:</em> The Word of the Lord.</p> 
-        <p><em>People:</em><strong> Thanks be to God.</strong></p>
-        <br><br>
-        <?=$canticle2;?>
+        <?=$nunc;?>
         <br><br>
         <?=$creed;?>
         <br><br>

@@ -172,7 +172,7 @@ Overlay/ Video
     margin: 3em auto 4em;
 }
 
-#morning h1, h2{
+#morning h1, h2, #evening h1, h2, #compline h1, h2{
   text-align: center;
 }
 
@@ -180,7 +180,7 @@ Overlay/ Video
   display: none;
 }
 
-.canticle, #psalm, .creed, #thanksgiving{
+.canticle, .psalm, .creed, #thanksgiving{
   padding-left: 13em;
 }
 

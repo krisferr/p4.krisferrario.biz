@@ -1,5 +1,5 @@
 <div class=canticle>
-    <p4>The Song of Simeon &nbsp;&nbsp;&nbsp;&nbsp;<em>Nunc Dimittis</em></p4> 
+    <h4>The Song of Simeon &nbsp;&nbsp;&nbsp;&nbsp;<em>Nunc Dimittis</em></h4> 
     
     <p>Luke 2:29-32</p> 
     

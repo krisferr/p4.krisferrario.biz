@@ -1,5 +1,5 @@
 <div class=canticle>
-    <p4>The Song of Mary &nbsp;&nbsp;&nbsp;&nbsp; <em>Magnificat</em> </p4>
+    <h4>The Song of Mary &nbsp;&nbsp;&nbsp;&nbsp; <em>Magnificat</em> </h4>
     
     <p>Luke 1:46-55</p>
     
