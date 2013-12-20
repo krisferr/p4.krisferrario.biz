@@ -25,13 +25,3 @@ window.onload = prepopulate_date;
 function passing_date(){
      window.location.href = "c_services.php?date=" + document.getElementById("datepicker").setAttribute('value', calculate_date());
 }
-
-//Allows for end message (overlay) be be hidden when the user hits the "Ok" button
-$(document).ready(function(){ 
-  $("#hide").click(function(){ 
-    $("#overlay").hide();  
-  });
-  $("#show").click(function(){  
-    $("#overlay").show(); 
-  });
-});
