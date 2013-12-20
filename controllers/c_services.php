@@ -133,6 +133,21 @@ class services_controller extends base_controller {
 	    
 		# The content of the template with a view file
 			$this->template->content = View::instance('v_services_compline');
+			$this->template->content->psalm = View::instance('../include/psalmpm');
+			$this->template->content->reading = View::instance('../include/reading');
+			$this->template->content->lp = View::instance('../include/lp');
+			$this->template->content->collect = View::instance('../include/collectpm');
+			$this->template->content->sleep = View::instance('../include/sleep');
+			
+		# An array of client files to be included in the head
+			$client_files_head = Array(
+			'../include/psalm',
+			'../include/reading',
+			'../include/lp',
+			'../include/collect',
+			'../include/sleep');
+		# load_client_files to generate the links from the above array	
+			$this->template->client_files_head = Utils::load_client_files($client_files_head);
 			
 		# Set the <title> tag
 			$this->template->title = "Compline";
@@ -154,18 +169,6 @@ class services_controller extends base_controller {
 			echo $this->template;
 
 	}
-	
-	
-	public function opening_sentance() {
-	    
-		# The content of the template with a view file
-			$this->template->opening = View::instance('include/opening');
-	      					     		
-		# Render the view
-			echo $this->template;
-
-	}
-	
         
 }
 ?>
