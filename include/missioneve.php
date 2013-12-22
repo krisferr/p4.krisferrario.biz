@@ -19,20 +19,8 @@
                             increase among us; through Jesus Christ our Lord. <em>Amen.</em><br></p>");
             
             
-            if (date("d")%3==0)
-            {
-                echo $mission[0];
-            }
-            
-            elseif (date("d")%3==1)
-            {
-                echo $mission[1];
-            }
-            
-            elseif (date("d")%3==2)
-            {
-                echo $mission[2];
-            }
+            $rand_keys = array_rand($mission);
+            echo $mission[$rand_keys] . "\n";
             
         ?>
     <br>
