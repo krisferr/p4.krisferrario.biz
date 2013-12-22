@@ -1,9 +1,9 @@
 <div class=canticle>
 
     <?php
-        $season="Advent";
+        $easter = date("z", easter_date(date("Y")));
     
-        if ($season=="Lent")        
+        if (date("z")>=date("z", $easter)-46 and date("z")<=date("z", $easter)-1)     
         {
                 $canticle2 = "<h4>2 A Song of Praise &nbsp;&nbsp;&nbsp;&nbsp;<em>Benedictus es, Domine</em></h4><br>
                 <p>Song of the Three Young Men, 29-34</p>

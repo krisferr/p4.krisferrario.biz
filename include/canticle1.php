@@ -1,9 +1,15 @@
+<head>
+    
+    <script src="../controllers/c_season"></script>
+    
+</head>
+
 <div class=canticle>
     <?php
+    
+        require('./controllers/c_season.php');
         
-        $season="Advent";
-        
-        if ($season=="Christmas")        
+        if (date("z")>=359 or date("z") <= 4)        
         {
     
                 $canticle1 = "<h4>16 The Song of Zechariah &nbsp;&nbsp;&nbsp;&nbsp;<em>Benedictus Dominus Deus</em></h4><br> 

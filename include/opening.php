@@ -7,7 +7,7 @@
             
             <?php
                     //Advent
-                    if (date('m')==12 and date('d') < 24)
+                    if (date('m')==12 and date('d') <= 24)
                     {
                         $opening = array("Watch , for you know not when the master of the house 
                                                 will come, in the evening, or at midnight, or at cockcrow, or 
@@ -21,7 +21,7 @@
                                                 it together.    Isaiah 40:5 ");
                     }
                     //Christmas
-                    elseif (date('m')==1)
+                    elseif (((date('m')==12) and (date('d') >= 25)) or (date('z')<= 4))
                     {
                         $opening= array("Behold, I bring you good news of a great joy, which will come 
                                                 to all the people; for unto you is born this day in the city of 
