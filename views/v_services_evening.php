@@ -15,8 +15,8 @@
 <div id=evening>
 <h1>Evening Prayer</h1>
 
-    <h2> <?php echo date("l, F j, Y")//, mktime($date)) ?></h2>
-    <h2>The Season of<?php //echo $season ?></h2>
+    <h2> <?php echo date("l, F j, Y") ?></h2>
+    <h2>The Season of <?=$season ?></h2>
     
     <?=$opening;?>
     <br>

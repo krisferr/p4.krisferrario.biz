@@ -20,16 +20,12 @@ class services_controller extends base_controller {
 		}
 	}
 	
-	public function season(){	
-		# Sets the $season
-			$this->season = "Advent";
-	}
-        	
 	
 	public function morning() {
 	    
 		# The content of the template with a view file
 			$this->template->content = View::instance('v_services_morning');
+			$this->template->content->season = View::instance('../controllers/c_season');
 			$this->template->content->opening = View::instance('../include/opening');
 			$this->template->content->confession = View::instance('../include/confession');
 			$this->template->content->invitatory = View::instance('../include/invitatory');
@@ -48,6 +44,7 @@ class services_controller extends base_controller {
 			
 		# An array of client files to be included in the head
 			$client_files_head = Array(
+			'../controllers/c_season',
 			'../include/opening',
 			'../include/confession',
 			'../include/invitatory',
@@ -86,6 +83,7 @@ class services_controller extends base_controller {
 	    
 		# The content of the template with a view file
 			$this->template->content = View::instance('v_services_evening');
+			$this->template->content->season = View::instance('../controllers/c_season');
 			$this->template->content->opening = View::instance('../include/openingeve');
 			$this->template->content->confession = View::instance('../include/confession');
 			$this->template->content->invitatory = View::instance('../include/invitatory');
@@ -103,6 +101,7 @@ class services_controller extends base_controller {
 			
 		# An array of client files to be included in the head
 			$client_files_head = Array(
+			'../controllers/c_season',
 			'../include/opening',
 			'../include/confession',
 			'../include/invitatory',
@@ -133,6 +132,7 @@ class services_controller extends base_controller {
 	    
 		# The content of the template with a view file
 			$this->template->content = View::instance('v_services_compline');
+			$this->template->content->season = View::instance('../controllers/c_season');
 			$this->template->content->psalm = View::instance('../include/psalmpm');
 			$this->template->content->reading = View::instance('../include/reading');
 			$this->template->content->lp = View::instance('../include/lp');
@@ -141,6 +141,8 @@ class services_controller extends base_controller {
 			
 		# An array of client files to be included in the head
 			$client_files_head = Array(
+			'../controllers/c_season',
+			'../include/heading',
 			'../include/psalm',
 			'../include/reading',
 			'../include/lp',
