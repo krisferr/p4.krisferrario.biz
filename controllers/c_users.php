@@ -5,6 +5,8 @@ class users_controller extends base_controller {
         parent::__construct();
     }
     
+
+    
     public function index() {
 	
     }
@@ -21,6 +23,22 @@ class users_controller extends base_controller {
     }
     
     public function p_signup() {
+	
+	// Verify that email does NOT already exist in the db
+        // If email has already been used, redirect with error message
+        $q = "SELECT email
+            FROM users
+            WHERE email = '".$_POST['email']."'";
+        $user_exists = DB::instance(DB_NAME)->select_field($q);
+        if ($user_exists) {
+	    
+            // Save relevant $_POST data so the user does not have to retype it when retrying signup
+            $_SESSION['first_name'] = $_POST['first_name'];
+            $_SESSION['last_name'] = $_POST['last_name'];
+            $_SESSION['password'] = $_POST['password'];
+            $_SESSION['verify-password'] = $_POST['verify-password'];
+            Router::redirect("/users/error");
+        }
 	
 	# Time data stored when the user creates a profile
 	$_POST['created'] = Time::now();
@@ -94,7 +112,7 @@ class users_controller extends base_controller {
 		setcookie("token", $token, strtotime('+1 year'), '/');
 	
 		# Send them to the main page - or whever you want them to go
-		Router::redirect("/");
+		Router::redirect("/users/profile/");
 		
 	}
 	# Fail
@@ -137,16 +155,16 @@ class users_controller extends base_controller {
 	$this->template->content = View::instance('v_users_profile');
 	$this->template->title = "Profile";
 	
-	$client_files_head = Array(
-		'/css/profile.css');
+	//$client_files_head = Array(
+		//'/css/profile.css');
 	
-	$this->template->client_files_head = Utils::load_client_files($client_files_head);
+	//$this->template->client_files_head = Utils::load_client_files($client_files_head);
 	
-	$client_files_body = Array(
-		'/js/profile.js');
+	//$client_files_body = Array(
+		//'/js/profile.js');
 	
 	
-	$this->template->client_files_body = Utils::load_client_files($client_files_body);
+	//$this->template->client_files_body = Utils::load_client_files($client_files_body);
 	
 	# Pass the data to the View
 	$this->template->content->user_name = $user_name;
@@ -157,6 +175,17 @@ class users_controller extends base_controller {
 	//$view = View::instance('v_users_profile');
 	//$view->user_name = $user_name;
 	//echo $view;
+    }
+    
+     public function error() {
+       
+        # Set up the view
+        $this->template->content = View::instance('v_users_error');
+	$this->template->title = "Error";
+	
+	# Render the view
+	echo $this->template;
+	
     }
 
 }

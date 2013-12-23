@@ -1,6 +1,7 @@
 <?php if($user): ?>
-	<h3 id=greeting>Hello, <a href="/users/profile"><?=$user->first_name;?></a>!</h3>
-
+	<h3 id=greeting>Hello, <a href="/users/profile"><?=$user->first_name;?></a>!<br>
+	<a href="/users/logout"> Logout</a></h3>
+	
 
 <?php else: ?>
 	<h3 id=greeting>

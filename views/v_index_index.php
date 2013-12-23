@@ -1,5 +1,6 @@
 <?php if($user): ?>
-	<h3 id=greeting>Hello, <a href="/users/profile"><?=$user->first_name;?></a>!</h3>
+	<h3 id=greeting>Hello, <a href="/users/profile"><?=$user->first_name;?></a>!<br>
+	<a href="/users/logout"> Logout</a></h3>
 	
 
 <?php else: ?>
@@ -11,7 +12,7 @@
 	
 <?php endif; ?>
 
-<div id=menu>
+<div id=index>
 		<br><br><h1>Welcome to Daily Prayer</h1><br>
 		
 		<h2>Date:</h2>
