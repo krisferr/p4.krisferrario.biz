@@ -221,3 +221,7 @@ Overlay/ Video
 #video button{
   margin-left: 12em;
 }
+
+.change, .answered, .praying, .urgent{
+  font-size: 14px;
+}
