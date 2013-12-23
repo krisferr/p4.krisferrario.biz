@@ -1,42 +1,19 @@
-/*-------------------------------------------------------------------------------------------------
-Date Selection on Home Page
--------------------------------------------------------------------------------------------------*/
-//Drop down Date Selector Menu
-$(function() {
-    $( "#datepicker" ).datepicker();
-  });
-
-//Function to prepopulate today's date
-function calculate_date() {
-  currentTime = new Date();
-  month       = currentTime.getMonth() + 1; //returns values 0-11 so +1 is required
-  day         = currentTime.getDate();
-  year        = currentTime.getFullYear();
-  calcdate    = month + "/" + day + "/" + year;
-  return calcdate;
-}
-
-function prepopulate_date() {
-  document.getElementById("datepicker").setAttribute('value', calculate_date());
-}
-
-window.onload = prepopulate_date;
-
-function passing_date(){
-     window.location.href = "c_services.php?date=" + document.getElementById("datepicker").setAttribute('value', calculate_date());
-}
-
-var count = 0;
+//A counter to count how many people have been praying
 $('.praying').click(function(){
-    count +=1;
-    $('#request').append('count' );
-    $('#request').click();
-    $('#request').css('background-color', '#cd6959');
-    
+   
+    $('#counter').html(function(i, val) { return +val+1 });
 });
 
+//A function to change the background color to let people know if your request has been answered
 $('.answered').click(function(){
     
     $('#request').css('background-color', '#59cd69');
+    
+});
+
+//A function to change the background color to let people know if your request is urgent
+$('.urgent').click(function(){
+    
+    $('#request').css('background-color', '#cd6959');
     
 });
