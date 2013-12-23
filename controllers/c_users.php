@@ -23,50 +23,59 @@ class users_controller extends base_controller {
     }
     
     public function p_signup() {
-	
-	// Verify that email does NOT already exist in the db
-        // If email has already been used, redirect with error message
-        $q = "SELECT email
-            FROM users
-            WHERE email = '".$_POST['email']."'";
-        $user_exists = DB::instance(DB_NAME)->select_field($q);
-        if ($user_exists) {
+	//Checks if new email is vaild
+	if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+	{
+
+	    // Verify that email does NOT already exist in the db
+	    // If email has already been used, redirect with error message
+	    $q = "SELECT email
+		FROM users
+		WHERE email = '".$_POST['email']."'";
+	    $user_exists = DB::instance(DB_NAME)->select_field($q);
+	    if ($user_exists) {
+		
+		// Save relevant $_POST data so the user does not have to retype it when retrying signup
+		$_SESSION['first_name'] = $_POST['first_name'];
+		$_SESSION['last_name'] = $_POST['last_name'];
+		$_SESSION['password'] = $_POST['password'];
+		$_SESSION['verify-password'] = $_POST['verify-password'];
+		Router::redirect("/users/error");
+	    }
 	    
-            // Save relevant $_POST data so the user does not have to retype it when retrying signup
-            $_SESSION['first_name'] = $_POST['first_name'];
-            $_SESSION['last_name'] = $_POST['last_name'];
-            $_SESSION['password'] = $_POST['password'];
-            $_SESSION['verify-password'] = $_POST['verify-password'];
-            Router::redirect("/users/error");
-        }
+	    # Time data stored when the user creates a profile
+	    $_POST['created'] = Time::now();
+	    $_POST['modified'] = Time::now();
+	    
+	    # Encrypts the password  
+	    $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
+	    
+	    # Create an encrypted token via their email address and a random string
+	    $_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string()); 
+	    
+	    
+	    # insert $_POST into users table
+	    $user_id = DB::instance(DB_NAME)->insert_row('users', $_POST);
+	    
+	    # insert a row in users_users table for always following self
+	    $q = Array (
+		"created" => Time::now(),
+		"user_id" => $user_id,
+		"user_id_followed" => $user_id);
+    
+	    # insert array into users_users table
+	    DB::instance(DB_NAME)->insert('users_users', $q);
+    
+	    
+	    # Redirects users back to the login page
+	    Router::redirect('/users/login');
+	    #header('Location: /users/login');
+	}
 	
-	# Time data stored when the user creates a profile
-	$_POST['created'] = Time::now();
-	$_POST['modified'] = Time::now();
-	
-	# Encrypts the password  
-	$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
-	
-	# Create an encrypted token via their email address and a random string
-	$_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string()); 
-	
-	
-	# insert $_POST into users table
-	$user_id = DB::instance(DB_NAME)->insert_row('users', $_POST);
-	
-	# insert a row in users_users table for always following self
-	$q = Array (
-            "created" => Time::now(),
-            "user_id" => $user_id,
-            "user_id_followed" => $user_id);
-
-        # insert array into users_users table
-        DB::instance(DB_NAME)->insert('users_users', $q);
-
-	
-	# Redirects users back to the login page
-	Router::redirect('/users/login');
-	#header('Location: /users/login');
+	else
+	{
+	    Router::redirect('/users/signup'); 
+	}
 	
     }
     
