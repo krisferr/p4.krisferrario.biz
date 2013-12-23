@@ -15,7 +15,6 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-	<script src="../../js/prayer.js"></script>
 	
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
 	
