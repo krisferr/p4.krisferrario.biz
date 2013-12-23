@@ -50,6 +50,12 @@ class requests_controller extends base_controller {
     # function index() lists all the posts of members being followed
     # it automatically has the user following his/her own own posts.
     public function index() {
+        
+        # An array of client files to be included in the body
+			$client_files_body = Array(
+			"../../js/prayer.js");
+	# load_client_files to generate the links from the above array	
+			$this->template->client_files_body = Utils::load_client_files($client_files_body);
         # Set up the View
         $this->template->content = View::instance('v_requests_index');
         $this->template->title = "See Prayer Requests";
@@ -74,6 +80,7 @@ class requests_controller extends base_controller {
 
          # Run query
          $requests = DB::instance(DB_NAME)->select_rows($q);
+         
 
          # Pass data to the view
          $this->template->content->requests = $requests;
@@ -182,18 +189,6 @@ class requests_controller extends base_controller {
 
         # redirect to list of posts
         Router::redirect('/requests/index');
-    }
-    
-     public function p_edit($request_id) {
-       
-        # build query statement
-        $data = Array (
-            "yes" => $_POST['count'],
-            "content" => $_POST['content']);
-        
-        $where_condition = "WHERE request_id=" .$request_id;
-        DB::instance(DB_NAME)->update_row('requests', $data, $where_condition);
-
     }
 
 }
