@@ -25,3 +25,18 @@ window.onload = prepopulate_date;
 function passing_date(){
      window.location.href = "c_services.php?date=" + document.getElementById("datepicker").setAttribute('value', calculate_date());
 }
+
+var count = 0;
+$('.praying').click(function(){
+    count +=1;
+    $('#request').append('count' );
+    $('#request').click();
+    $('#request').css('background-color', '#cd6959');
+    
+});
+
+$('.answered').click(function(){
+    
+    $('#request').css('background-color', '#59cd69');
+    
+});
