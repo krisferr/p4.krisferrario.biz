@@ -48,20 +48,14 @@
 	    </time>
 	    
 	    <aside>
-			<form method="POST"action="requests/p_praying/<?=$request_id?>" >
-			    <a class=praying href='/requests/index/<?=$request['request_id']?>'>I'm Praying</a>
-			</form>
-			
 		    <!-- For those posts owned by this user id provide option to delete post-->
-		    <?php if ($request['request_user_id'] == $user->user_id): ?>
-			
-			<form method="POST"action="requests/p_answered/<?=$request_id?>" >
-			    <a class=answered href='#'>Pray Answered</a>
-			</form>
-			<br>
-			<a class=change href='/requests/delete/<?=$request['request_id']?>'>Delete</a>
-			<a class=change href='/requests/edit/<?=$request['request_id']?>'>Edit</a>
+		    <?php if ($request['request_user_id'] == $user->user_id): ?>   
+			<button class=change onclick=location.href="/requests/delete/<?=$request['request_id']?>">Delete</button>
+			<button class=change onclick=location.href="/requests/edit/<?=$request['request_id']?>">Edit</button>
+			<button class="answered" type="button">Pray Answered</button>
+			<button class="urgent" type="button">Urgent!</button>
 		    <? endif; ?>
+			<button class="praying" type="button">I'm Praying<div id="counter">0</div></button>
 	    </aside>  
 	</div>
     </article>
