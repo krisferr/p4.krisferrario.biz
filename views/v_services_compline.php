@@ -31,7 +31,7 @@
 	<br>
 	<p>Let us confess our sins to God.</p>
 	<br>
-	<p><em>Officiant and People:</em></h5>
+	<p><em>Officiant and People:</em></p>
 	<div class=confession>
 	<p>Almighty God, our heavenly Father:<br>
 	We have sinned against you,<br>
@@ -43,7 +43,7 @@
 	and grant that we may serve you<br>
 	in newness of life,<br>
 	to the glory of your Name. Amen.</p>
-     
+	</div>
     <br>
 	<p><em>Officiant:</em> May the Almighty God grant us forgiveness of all our sins, <br>
 	and the grace and comfort of the Holy Spirit. <em>Amen.</em></p>
